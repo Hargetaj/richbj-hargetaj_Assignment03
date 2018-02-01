@@ -1,11 +1,12 @@
-/*
-Name: Alex Hargett, Bruce Rich
-Class Number and Section: Programming 2 (002)
-Assignment #: 03
-Due date: 1/29/2018
-Description: This will test BigInteger data values for there Prime-ness
- */
+/**
+*Name: Alex Hargett, Bruce Rich
+*Class Number and Section: Programming 2 (002)
+*Assignment #: 03
+*Due date: 2/1/2018
+*Description: This will test BigInteger data values for there Prime-ness
+**/
 package main;
+import java.math.BigInteger;
 /**
  * This program will test the prime-ness of BigInteger numbers, and test our method 
  * @author hargetaj
@@ -18,119 +19,119 @@ public class Main {
  */
 	public static void main(String[] args) {
 		//here declare a boolean to hold the value if prime or not
-		BigIntPrime checkPrime = new BigIntPrime(1);
+		BigIntPrime checkPrime = new BigIntPrime();
 		
 		//Now we will test the results to see if they are accurate
 		System.out.println("The value in () is the number being checked.");
 		System.out.println("____________________________________________");
 		
 		//Test #1
-		checkPrime = BigIntPrime(1);
+		BigInteger a = new BigInteger("1");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #1(1)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #1(1)-  Expected Result: false   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == false) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #2
-		checkPrime = BigIntPrime(2);
+		a = new BigInteger("2");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #2(2)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #2(2)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #3
-		checkPrime = BigIntPrime(1234567);
+		a = new BigInteger("1234567");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #3(1234567)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #3(1234567)-  Expected Result: false   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == false) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #4
-		checkPrime = BigIntPrime(1299019);
+		a = new BigInteger("1299019");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #4(1299019)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #4(1299019)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #5
-		checkPrime = BigIntPrime(36);
+		a = new BigInteger("36");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #5(36)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #5(36)-  Expected Result: false   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == false) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #6
-		checkPrime = BigIntPrime(157);
+		a = new BigInteger("157");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #6(157)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #6(157)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #7
-		checkPrime = BigIntPrime(987653);
+		a = new BigInteger("2500001221");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #7(987653)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #7(2500001221)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #8
-		checkPrime = BigIntPrime(7919);
+		a = new BigInteger("7919");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #8(7919)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #8(7919)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #9
-		checkPrime = BigIntPrime(4969);
+		a = new BigInteger("4969");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #9(4969)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #9(4969)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #10
-		checkPrime = BigIntPrime(1346);
+		a = new BigInteger("1346");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #10(1346)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #10(1346)-  Expected Result: false   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == false) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #11
-		checkPrime = BigIntPrime(17);
+		a = new BigInteger("17");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #11(17)-  Expected Result: true   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == true) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #11(17)-  Expected Result: true   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == true) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 		
 		//Test #12
-		checkPrime = BigIntPrime(0);
+		a = new BigInteger("0");
+		checkPrime.setNumber(a);
 		System.out.println();
-		System.out.println("Test #12(0)-  Expected Result: false   | Value Returned: " + checkPrime);//tells what the system should output and what it actually does
-		if (checkPrime == false) {//checks if the code accurately displays if the number is prime
+		System.out.println("Test #12(0)-  Expected Result: false   | Value Returned: " + checkPrime.IsBigIntPrime());//tells what the system should output and what it actually does
+		if (checkPrime.IsBigIntPrime() == false) {//checks if the code accurately displays if the number is prime
 			System.out.println("----------Test Passed----------");//alerts user that the test was a success and the code worked
 		}else System.out.println("----------Test Failed----------");//alerts the user that there was a error
-		checkPrime = false;//reset the value back to default so it doesn't affect future test
 	}
 
 }
